@@ -1,0 +1,9 @@
+1. In app/api/auth/[...nextauth]/route.js :
+ - Build the authOptions object with providers property which will be an array with providers
+ - Pass the object(authOptions in this case) to MextAuth function from next-auth/next and export it as GET and POST
+2. Build an .env file within the app root folder and provide the GOOGLE_CLIENT_ID AND GOOGLE_CLIENT_SECRET (credentials generated from Google Console ). 
+Also, create the variables NEXTAUTH_URL and NEXTAUTH_SECRET
+- Use the GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in the object with providers (authOptions) 
+3. Wrap the app around <SessionProvider<SessionProvider/> from next-auth/react
+4. Add Sign In capability on a Sign In button:
+- add onClick method on button and use signIn from next-auth/react
