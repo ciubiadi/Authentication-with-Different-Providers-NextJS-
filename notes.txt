@@ -1,3 +1,5 @@
+How to create Authentication system functionalities with NextJS
+FOR SIGN IN
 1. In app/api/auth/[...nextauth]/route.js :
  - Build the authOptions object with providers property which will be an array with providers
  - Pass the object(authOptions in this case) to MextAuth function from next-auth/next and export it as GET and POST
@@ -7,3 +9,7 @@ Also, create the variables NEXTAUTH_URL and NEXTAUTH_SECRET
 3. Wrap the app around <SessionProvider<SessionProvider/> from next-auth/react
 4. Add Sign In capability on a Sign In button:
 - add onClick method on button and use signIn from next-auth/react
+
+FOR SIGN OUT
+5. use the signIn, signOut, useSessionfrom next-auth/react and invoke signIn and signOut from onClick 
+6. 
