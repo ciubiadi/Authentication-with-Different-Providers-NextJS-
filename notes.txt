@@ -12,4 +12,6 @@ Also, create the variables NEXTAUTH_URL and NEXTAUTH_SECRET
 
 FOR SIGN OUT
 5. use the signIn, signOut, useSessionfrom next-auth/react and invoke signIn and signOut from onClick 
-6. 
+
+RENDER USER DETAILS
+6. To render the image I need to add in nextConfig the image 
