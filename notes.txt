@@ -15,3 +15,15 @@ FOR SIGN OUT
 
 RENDER USER DETAILS
 6. To render the image I need to add in nextConfig the image 
+
+MONGODB CONNECTION
+7. Access MongoDB and configure it:
+- create a Cluster and get username and password for Database Access. 
+Store username and password in .env
+- Add 0.0.0.0/0 address to Network Access
+8. Connect to the Cluster and create MONGODB_URI env variable.
+9. Create the mongoose connection using the MONGODB_URI
+10. Create the User model with Schema, models from 'mongoose', and export the models.User || mongoose.model
+11. Send a POST request with a test name and email. (Optionally, check the api with postman.)
+12. Browse the collection in mongodb,and the user will be found
+13. Add the callbacks propery in authOptions object with the signIn and signOut functions in route.js
