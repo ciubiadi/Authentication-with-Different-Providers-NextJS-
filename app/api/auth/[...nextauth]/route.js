@@ -12,14 +12,13 @@ const authOptions = {
     ],
     callbacks: {
         async signIn({ user, account }) {
-            // console.log("User: ", user);
-            // console.log("Account: ", account);
 
-            if(account.provider === 'gooogle'){
+            if(account.provider === 'google'){
                 const {name, email} = user;
+
                 try{
                     await connectMongoDB();
-                    const userExists = await User.findOne({email});
+                    const userExists = await User.findOne({ email });
 
                     if(!userExists){
                         const res = await fetch("http://localhost:3000/api/user", {
@@ -34,8 +33,6 @@ const authOptions = {
                           });
     
                         if(res.ok){
-                            console.log('res');
-                            console.log(res);
                             return user;
                         }
                     }
